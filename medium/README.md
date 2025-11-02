@@ -1,5 +1,5 @@
 
-# Easy Level Problems
+# Medium Level Problems
 
 This section contains documented solutions to LeetCode Medium problems.  
 Each entry includes: **problem link, question, intuition, approach, and complexity.**
