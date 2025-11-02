@@ -4,42 +4,52 @@ This repository contains structured solutions to LeetCode problems, grouped by *
 Each solution includes: **problem link, intention, approach, and complexity** (documented inside difficulty-level READMEs).
 
 ---
-
-## ✅ Easy Problems
+<details><summary>
+✅ Easy Problems</summary>
 
 | Q No | Problem | Status | Time Taken | Memory |
 |------|---------|--------|------------|------------|
 | 0001 | Two Sum | ✅ | 3 ms | 13.2 MB
 | 0242 | Valid Anagram | ✅ | 19 ms | 12.5 MB
 
----
+---</details>
 
-## ⚡ Medium Problems
+<details><summary>⚡ Medium Problems</summary>
 
 | Q No | Problem | Status | Time Taken | Memory |
 |------|---------|--------|------------|------------|
 | — | — | — | — | — |
 
----
+---</details>
 
-## 🔥 Hard Problems
+<details><summary>🔥 Hard Problems</summary>
 
 | Q No | Problem | Status | Time Taken | Memory |
 |------|---------|--------|------------|------------|
 | — | — | — | — | — | 
 
----
+---</details>
 
-### 📁 Folder Structure
+<details><summary>📁 Folder Structure</summary>
 LEET CODE/
-│── README.md
-│
-├── easy/
-│ └── README.md
-│
-├── medium/
-│ └── README.md
-│
-├── hard/
-└── README.md
 
+     │── README.md
+
+     │
+
+     ├── easy/
+
+          └── README.md
+
+     │
+
+     ├── medium/
+
+          └── README.md
+
+     │
+
+     ├── hard/
+
+          └── README.md
+</details>
