@@ -18,7 +18,8 @@ Each solution includes: **problem link, intention, approach, and complexity** (d
 
 | Q No | Problem | Status | Time Taken | Memory |
 |------|---------|--------|------------|------------|
-| — | — | — | — | — |
+| 0238 | Product of Array Except Self | ✅ | 30 ms | 20.3 MB
+| 0049 | Group Anagrams | ✅ | 15 ms | 16.8 MB
 
 ---</details>
 

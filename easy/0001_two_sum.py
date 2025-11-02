@@ -3,9 +3,6 @@
 # You may assume that each input would have exactly one solution, and you may not use the same element twice.
 # You can return the answer in any order.
 
-# Intuition
-# We want to find 2 numbers that add up to the target. Instead of checking every pair, which can be slow, we can store numbers, we have already seen in a hash map and check if a complement already exists. 
-
 # Approach
 # 1. Loop through the array. 
 # 2. Take a note of num(number from array) and i(index of array) using enumerate.
