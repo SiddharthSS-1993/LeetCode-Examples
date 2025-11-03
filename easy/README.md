@@ -29,13 +29,61 @@ We want to find 2 numbers that add up to the target. Instead of checking every p
 
 **Time Complexity:**
 O(n) as we only scan the array once. and dictionary lookups are O(1) on average.  
+
 **Space Complexity:** 
 O(n), worst case we store all values of the array into our dictionary.
+
+---
+### 0121. Buy Vs Sell Stock  
+🔗 https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+
+**Question:**
+You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+
+Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+Example 1:
+
+Input: prices = [7,1,5,3,6,4]
+Output: 5
+Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+Example 2:
+
+Input: prices = [7,6,4,3,1]
+Output: 0
+Explanation: In this case, no transactions are done and the max profit = 0.
+ 
+
+Constraints:
+
+1 <= prices.length <= 105
+0 <= prices[i] <= 104
+
+**Intuition:**
+To maximize profit, we want to buy at the lowest price before selling at a higher price later. We can track the minimum price seen so far and compute the best possible profit if we sell on each day.
+
+**Approach:**
+Start with min price = null(Highest number) and max_profit as 0.
+Traverse through the price list. if price < min_price, price becomes the min price.
+If this case isnt true, we compare the current max_profit, with difference between price and min price.
+If price - min_price > max_profit, that becomes the max profit.
+In the end we return maximum profit after the list has been traversed.
+
+**Time complexity:**
+O(n) – single pass
+
+**Space complexity:**
+O(1), constants space.
 
 ---
 </details>
 
 <details><summary>Strings</summary>
+
+<br
 
 ### 0242. Valid Anagram  
 🔗 https://leetcode.com/problems/valid-anagram/
@@ -60,6 +108,44 @@ O(n) One pass over each string
   
 **Space Complexity:** 
 O(1) for lower case characters or O(k) per unique characters.
+---
+</details>
+
+<details><summary>Linked List</summary>
+
+<br
+
+### 0141. Linked List Cycle  
+🔗 https://leetcode.com/problems/linked-list-cycle/description/
+
+**Question:**
+Given head, the head of a linked list, determine if the linked list has a cycle in it.
+
+There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.
+
+Return true if there is a cycle in the linked list. Otherwise, return false.
+
+**Intuition:**  
+You are given the head of a linked list.
+You must return True if the list has a cycle (a node points back to a previous node), else return False.
+
+You cannot use extra space like a list/set (even though it works).
+The optimal way is to use Floyd’s Tortoise & Hare Algorithm (fast & slow pointers).
+
+**Approach:**  
+We use:
+1. slow pointer → moves 1 step
+2. fast pointer → moves 2 steps
+3. If there is a cycle, fast will eventually meet slow.
+4. If there is no cycle, fast will reach None (end of list).
+5. Think of this like a race. the faster car if one lap ahead meets the slow car showing the track is cyclic.
+
+**Time Complexity:** 
+O(n) — worst case we traverse whole list
+  
+**Space Complexity:** 
+O(1) — no extra data structures used
+
 ---
 </details>
 
