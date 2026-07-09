@@ -33,6 +33,7 @@ O(n) as we only scan the array once. and dictionary lookups are O(1) on average.
 **Space Complexity:** 
 O(n), worst case we store all values of the array into our dictionary.
 
+
 ---
 ### 0121. Buy Vs Sell Stock  
 🔗 https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
@@ -83,7 +84,7 @@ O(1), constants space.
 
 <details><summary>Strings</summary>
 
-<br
+<br>
 
 ### 0242. Valid Anagram  
 🔗 https://leetcode.com/problems/valid-anagram/
@@ -104,16 +105,17 @@ So instead of sorting, we can store in a dictionary, a count of each character. 
 5. If these conditions dont apply andwe loop through the entire string 2, we reach a solution the 2 strings are anagrams. 
 
 **Time Complexity:** 
-O(n) One pass over each string
+O(n) One pass over each string.
   
 **Space Complexity:** 
 O(1) for lower case characters or O(k) per unique characters.
+
 ---
 </details>
 
 <details><summary>Linked List</summary>
 
-<br
+<br>
 
 ### 0141. Linked List Cycle  
 🔗 https://leetcode.com/problems/linked-list-cycle/description/
@@ -145,6 +147,68 @@ O(n) — worst case we traverse whole list
   
 **Space Complexity:** 
 O(1) — no extra data structures used
+
+---
+</details>
+
+<details><summary>Stack</summary>
+
+<br>
+
+### 0020. Valid Parenthesis  
+🔗 https://leetcode.com/problems/valid-parentheses/description/
+
+**Question**
+Given a string s containing only the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+A string is valid if:
+1. Every opening bracket has a corresponding closing bracket.
+2. Brackets close in the correct order.
+3. Every closing bracket has a matching opening bracket.
+
+**Intuition**
+For the string to have a valid parenthesis, each should have equal number of each parenthesis type in the right order.
+
+This is a classic example of a stack, each append while traversing the string, validates the parenthesis type by pushing onto the stack. We can use a dictionary to find the equivalent value pair to each parenthesis. If every push has the right vslue pair pop, and our stack becomes empty. We return true else False
+
+Why Stack?
+A stack follows Last In First Out (LIFO).
+The most recently opened bracket must always be closed first.
+Example:
+
+([{}])
+
+Push (      Stack: (
+Push [      Stack: ( [
+Push {      Stack: ( [ {
+Pop {       Matches } Stack: ( [
+Pop [       Matches ] Stack: (
+Pop (       Matches ) Stack: 
+
+Stack becomes empty, therefore the string is valid.
+
+
+**Approach**
+1. Create an empty stack to store opening brackets.
+2. Create a dictionary that maps each closing bracket to its corresponding opening bracket.
+3. Traverse the string one character at a time.
+4. If the character is an opening bracket, push it onto the stack.
+5. If the character is a closing bracket:
+       a. If the stack is empty, return False because there is no opening bracket to match.
+       b. Pop the most recent opening bracket from the stack.
+       c. Compare it with the expected opening bracket from the dictionary.
+       d. If they do not match, return False.
+6. After processing the entire string, if the stack is empty, all brackets were matched.
+   Otherwise, return False.
+
+
+**Time Complexity**
+O(n)
+Each character is pushed and popped at most once.
+
+**Space Complexity**
+O(n)
+In the worst case, all characters are opening brackets and are stored in the stack.
 
 ---
 </details>
