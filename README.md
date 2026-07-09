@@ -14,6 +14,7 @@ Each solution includes: **problem link, intention, approach, and complexity** (d
 | 0242 | Valid Anagram | ✅ | 19 ms | 12.5 MB
 | 0121 | buy vs sell stock | ✅ | 77 ms | 19.1 MB
 | 0141 | linked list cycle | ✅ | 36 ms | 19.6 MB
+| 0217 | contains duplicate | ✅ | 31 ms | 25.96 MB
 
 ---</details>
 
