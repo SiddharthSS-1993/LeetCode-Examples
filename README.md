@@ -11,10 +11,12 @@ Each solution includes: **problem link, intention, approach, and complexity** (d
 |------|---------|--------|------------|------------|
 | 0001 | Two Sum | ✅ | 3 ms | 13.2 MB
 | 0020 | Valid Parenthesis | ✅ | 3 ms | 12.6 MB
-| 0242 | Valid Anagram | ✅ | 19 ms | 12.5 MB
 | 0121 | buy vs sell stock | ✅ | 77 ms | 19.1 MB
 | 0141 | linked list cycle | ✅ | 36 ms | 19.6 MB
+| 0206 | reverse linked list | ✅ | 0 ms | 14.42 MB
 | 0217 | contains duplicate | ✅ | 31 ms | 25.96 MB
+| 0242 | Valid Anagram | ✅ | 19 ms | 12.5 MB
+| 0704 | Binary Search | ✅ | 0 ms | 13.3 MB
 
 ---</details>
 
@@ -22,8 +24,11 @@ Each solution includes: **problem link, intention, approach, and complexity** (d
 
 | Q No | Problem | Status | Time Taken | Memory |
 |------|---------|--------|------------|------------|
-| 0238 | Product of Array Except Self | ✅ | 30 ms | 20.3 MB
+| 0019 | Remove nth node from end | ✅ | 0 ms | 12.4 MB
+| 0033 | Search In rotated Sorted Array | ✅ | 0 ms | 12.42 MB
 | 0049 | Group Anagrams | ✅ | 15 ms | 16.8 MB
+| 0238 | Product of Array Except Self | ✅ | 30 ms | 20.3 MB
+
 
 ---</details>
 

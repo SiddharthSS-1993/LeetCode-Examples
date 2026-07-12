@@ -64,9 +64,11 @@ Constraints:
 0 <= prices[i] <= 104
 
 **Intuition:**
+
 To maximize profit, we want to buy at the lowest price before selling at a higher price later. We can track the minimum price seen so far and compute the best possible profit if we sell on each day.
 
 **Approach:**
+
 Start with min price = null(Highest number) and max_profit as 0.
 Traverse through the price list. if price < min_price, price becomes the min price.
 If this case isnt true, we compare the current max_profit, with difference between price and min price.
@@ -78,6 +80,62 @@ O(n) – single pass
 
 **Space complexity:**
 O(1), constants space.
+
+---
+### 0704. Binary Search  
+🔗 https://leetcode.com/problems/binary-search/
+
+**Question**
+Given an array of integers nums sorted in ascending order and an integer target,
+return the index of target if it exists in nums.
+Otherwise, return -1.
+
+The algorithm must run in O(log n) time.
+
+**Intuition**
+Why Binary Search?, reducing the time to traverse the entire array after every comparison.
+
+**Approach**
+1. Create two pointers:
+      left  -> start of the search range
+      right -> end of the search range
+2. Find the middle index of the current search range.
+3. Compare nums[mid] with the target:
+      a. If they are equal, return mid.
+      b. If nums[mid] is smaller than target, search the right half.
+      c. If nums[mid] is greater than target, search the left half.
+4. Continue until left becomes greater than right.
+5. If the target is not found, return -1.
+
+Example:
+
+nums = [-1, 0, 3, 5, 9, 12]
+target = 9
+
+left = 0
+right = 5
+
+mid = 2
+nums[mid] = 3
+
+3 is smaller than 9,
+so discard the left half and search from index 3 to 5.
+
+left = 3
+right = 5
+
+mid = 4
+nums[mid] = 9
+
+Target found at index 4.
+
+**Time Complexity**
+O(log n)
+The search space is divided into half after every comparison.
+
+**Space Complexity**
+O(1)
+Only a few variables are used regardless of the input size.
 
 ---
 </details>
@@ -117,7 +175,7 @@ O(1) for lower case characters or O(k) per unique characters.
 
 <br>
 
-### 0141. Linked List Cycle  
+### 0141. Reverse Linked List Cycle  
 🔗 https://leetcode.com/problems/linked-list-cycle/description/
 
 **Question:**
@@ -147,6 +205,109 @@ O(n) — worst case we traverse whole list
   
 **Space Complexity:** 
 O(1) — no extra data structures used
+
+---
+
+### 0206. Linked List  
+🔗 https://leetcode.com/problems/reverse-linked-list/
+
+**Question**
+Given the head of a singly linked list, reverse the linked list
+and return the new head.
+
+Example:
+Input:
+1 -> 2 -> 3 -> 4 -> 5 -> None
+
+Output:
+5 -> 4 -> 3 -> 2 -> 1 -> None
+
+**Intuition**
+
+Why linked list?
+This is an example of a classic linkedlist chain where one node chains to the next.
+
+Why Three Pointers?
+When we reverse current.next, we lose access to the remaining list.
+
+**Approach**
+
+Use three pointers:
+prev    -> the previous node
+current -> the node currently being processed
+next_node -> temporarily stores the next node
+
+For every node:
+1. Save the next node before changing any links.
+2. Reverse the current node's pointer.
+3. Move prev one step forward.
+4. Move current one step forward.
+5. Continue until current becomes None.
+
+At the end, prev points to the new head.
+
+Example:
+1 -> 2 -> 3
+
+If we directly change:
+
+1.next = None
+
+then we would lose the reference to node 2.
+
+Therefore, we first save:
+
+next_node = current.next
+
+and only then reverse the pointer.
+
+Dry Run
+
+Original:
+
+1 -> 2 -> 3 -> None
+
+Initial values:
+
+prev = None
+current = 1
+
+Iteration 1:
+next_node = 2
+current.next = prev
+None <- 1     2 -> 3
+
+prev = 1
+current = 2
+
+Iteration 2:
+next_node = 3
+current.next = prev
+
+None <- 1 <- 2     3
+
+prev = 2
+current = 3
+
+Iteration 3:
+next_node = None
+current.next = prev
+
+None <- 1 <- 2 <- 3
+
+prev = 3
+current = None
+
+The loop ends.
+prev is now the new head.
+
+**Time Complexity**
+O(n)
+We visit every node exactly once.
+
+**Space Complexity**
+O(1)
+We only use three pointer variables.
 
 ---
 </details>
@@ -262,4 +423,5 @@ In the worst case, all elements are unique and stored in the set.
 
 ---
 </details>
+
 

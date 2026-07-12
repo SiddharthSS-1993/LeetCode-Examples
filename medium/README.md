@@ -7,9 +7,84 @@ Each entry includes: **problem link, question, intuition, approach, and complexi
 ---
 <details><summary>Array</summary>
 
-<br>
+### 0033. Search In Rotated Sorted Array  
+🔗 https://leetcode.com/problems/search-in-rotated-sorted-array/
 
-### 0238. Product Of Array Except Self  
+**Question**
+There is an integer array nums sorted in ascending order (with distinct values).
+
+Before being passed to your function, nums is rotated at an unknown pivot.
+
+Example:
+Original : [0,1,2,4,5,6,7]
+Rotated : [4,5,6,7,0,1,2]
+
+Given the rotated array nums and an integer target,
+return the index of target if it exists.
+Otherwise, return -1.
+
+The algorithm must run in O(log n) time.
+
+**Intuition**
+Why Binary Search?
+Although the array is rotated, one side of every search window is always sorted.
+
+By identifying the sorted half, we can determine
+which half can safely be discarded.
+
+**Approach**
+1. Perform Binary Search.
+2. Find the middle element.
+3. One half of the array will always be sorted.
+4. Check whether the target lies inside the sorted half.
+5. If yes, search that half.
+6. Otherwise, search the other half.
+7. Continue until the target is found or the search space becomes empty.
+
+Example:
+
+nums = [4,5,6,7,0,1,2]
+target = 0
+
+left = 0
+right = 6
+
+mid = 3
+nums[mid] = 7
+
+Left half:
+[4,5,6,7]
+is sorted.
+
+Target 0 is not inside this range.
+
+Therefore search the right half.
+
+left = 4
+right = 6
+
+mid = 5
+nums[mid] = 1
+
+Right half:
+[0,1,2]
+is sorted.
+
+Target lies inside this range.
+
+Continue searching until target is found.
+
+**Time Complexity**
+O(log n)
+Binary Search removes half of the search space every iteration.
+
+**Space Complexity**
+O(1)
+Only constant extra memory is used.
+
+--- 
+
+### Array Except Self  
 🔗 https://leetcode.com/problems/product-of-array-except-self/
 
 **Question:**
@@ -121,6 +196,109 @@ O(n·k log k): n = number of strings, k = max length, sorting each word.
   
 **Space Complexity:** 
 O(n·k): We store all words in the dictionary.
+
+---
+</details>
+
+<details><summary>Linked List</summary>
+
+### 0019. Remove nth node From End  
+🔗 https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
+
+**Question**
+Given the head of a linked list, remove the nth node from the end
+of the list and return its head.
+
+Example:
+
+Input:
+head = 1 -> 2 -> 3 -> 4 -> 5
+n = 2
+
+Output:
+1 -> 2 -> 3 -> 5
+
+**Intuition**
+Why Fast & Slow Pointers?
+
+Instead of finding the length first,
+maintain a gap of n nodes between fast and slow.
+
+When fast reaches the end,
+slow automatically reaches the node before the one
+that must be deleted.
+
+This solves the problem in one traversal.
+
+**Approach**
+
+Use two pointers: fast and slow.
+
+1. Create a dummy node before the head.
+2. Place both fast and slow at the dummy node.
+3. Move fast forward by (n + 1) nodes.
+4. Move both pointers together until fast reaches the end.
+5. Slow will now be just before the node to delete.
+6. Skip the target node by changing the next pointer.
+7. Return dummy.next.
+
+Dry Run
+
+head = 1 -> 2 -> 3 -> 4 -> 5
+n = 2
+
+Dummy -> 1 -> 2 -> 3 -> 4 -> 5
+
+Initially:
+
+fast = Dummy
+slow = Dummy
+
+Move fast 3 steps (n + 1)
+
+Dummy -> 1 -> 2
+
+Gap between fast and slow = 2 nodes
+
+Move both together.
+
+Eventually:
+
+Dummy -> 1 -> 2 -> 3 -> 4 -> 5
+                   S              F
+
+Slow is just before node 4.
+
+Delete:
+
+slow.next = slow.next.next
+
+Result:
+
+1 -> 2 -> 3 -> 5
+
+Why Dummy Node?
+
+Consider:
+
+head = [1]
+n = 1
+
+We need to delete the first node.
+
+Without a dummy node,
+there is no node before head.
+
+Dummy makes deletion of the head exactly the same
+as deleting any other node.
+
+**Time Complexity**
+O(n)
+Only one traversal of the linked list.
+
+**Space Complexity**
+O(1)
+Only a few pointer variables are used.
 
 ---
 </details>
