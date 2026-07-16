@@ -11,6 +11,7 @@ Each solution includes: **problem link, intention, approach, and complexity** (d
 |------|---------|--------|------------|------------|
 | 0001 | Two Sum | ✅ | 3 ms | 13.2 MB
 | 0020 | Valid Parenthesis | ✅ | 3 ms | 12.6 MB
+| 0104 | max_depth_binary_tree | ✅ | 8 ms | 24.8 MB
 | 0121 | buy vs sell stock | ✅ | 77 ms | 19.1 MB
 | 0141 | linked list cycle | ✅ | 36 ms | 19.6 MB
 | 0206 | reverse linked list | ✅ | 0 ms | 14.42 MB

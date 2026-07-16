@@ -424,4 +424,86 @@ In the worst case, all elements are unique and stored in the set.
 ---
 </details>
 
+<details><summary>Tree</summary>
+
+<br>
+
+### 01014. Max Depth Of Binary Tree  
+🔗 https://leetcode.com/problems/maximum-depth-of-binary-tree/
+
+**Question**
+Given the root of a binary tree, return its maximum depth.
+
+The maximum depth is the number of nodes along the longest path
+from the root node down to the farthest leaf node.
+
+**Intuition**
+To make matters simple, assume the example array in the question is already transformed into a 3 like structure. 
+
+Eg [3, 9, 20, None, None, 15, 7] has been converted to 
+TreeNode(3) self.val=3, self.left=9, self.right=20
+TreeNode(9) self.val=9, self.left=None, self.right=None and soo. 
+
+by recursively going through the same function we can find the
+max_depth at each node and add 1(counting root as well).
+
+**Approach**
+1. If the current node is None, return 0 because an empty tree has no depth.
+2. Recursively calculate the depth of the left subtree.
+3. Recursively calculate the depth of the right subtree.
+4. The current node contributes one level.
+5. Return:
+      1 + max(left_depth, right_depth)
+
+Why DFS (Recursion)?
+
+A tree is made up of smaller trees.
+
+To calculate the depth of the current node,
+we first calculate the depth of its left subtree
+and its right subtree.
+
+The larger of the two depths determines the longest path.
+
+Finally, add 1 for the current node.
+
+Dry Run
+
+         3
+       /   \
+      9     20
+           /  \
+          15   7
+
+maxDepth(9)
+-> 1
+
+maxDepth(15)
+-> 1
+
+maxDepth(7)
+-> 1
+
+maxDepth(20)
+-> 1 + max(1,1)
+-> 2
+
+maxDepth(3)
+-> 1 + max(1,2)
+-> 3
+
+**Time Complexity**
+O(n)
+Every node is visited exactly once.
+
+**Space Complexity**
+O(h)
+h is the height of the tree.
+Worst case: O(n)
+Balanced tree: O(log n)
+
+---
+</details>
+
+
 
