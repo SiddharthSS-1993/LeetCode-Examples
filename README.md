@@ -37,7 +37,7 @@ Each solution includes: **problem link, intention, approach, and complexity** (d
 
 | Q No | Problem | Status | Time Taken | Memory |
 |------|---------|--------|------------|------------|
-| — | — | — | — | — | 
+| 0124 | Binary Tree Maximum Path Sum | ✅ | 26 ms | 25.7 MB | 
 
 ---</details>
 
@@ -64,3 +64,4 @@ LEET CODE/
 
           └── README.md
 </details>
+✅
