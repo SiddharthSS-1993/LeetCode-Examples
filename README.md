@@ -16,6 +16,7 @@ Each solution includes: **problem link, intention, approach, and complexity** (d
 | 0141 | linked list cycle | ✅ | 36 ms | 19.6 MB
 | 0206 | reverse linked list | ✅ | 0 ms | 14.42 MB
 | 0217 | contains duplicate | ✅ | 31 ms | 25.96 MB
+| 0226 | Inverted Binary Tree | ✅ | 0 ms | 12.4 MB
 | 0242 | Valid Anagram | ✅ | 19 ms | 12.5 MB
 | 0704 | Binary Search | ✅ | 0 ms | 13.3 MB
 
