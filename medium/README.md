@@ -305,6 +305,81 @@ Only a few pointer variables are used.
 
 <details><summary>Tree</summary>
 
+### 0098. Validate Binary Search Tree  
+🔗 https://leetcode.com/problems/validate-binary-search-tree/
+
+**Question**
+Given the root of a binary tree, determine whether it is a valid
+Binary Search Tree (BST).
+
+A valid BST must satisfy:
+1. Every value in the left subtree must be smaller than the current node.
+2. Every value in the right subtree must be greater than the current node.
+3. Both left and right subtrees must also be valid BSTs.
+
+Duplicate values are not allowed.
+
+**Intuition**
+Why In-Order Traversal?
+
+In a valid BST:
+- All values in the left subtree are smaller.
+- The root comes next.
+- All values in the right subtree are larger.
+
+Therefore:
+Left -> Root -> Right
+produces a strictly increasing sequence.
+
+**Approach**
+Use in-order traversal:
+Left -> Root -> Right
+
+1. For a valid BST, in-order traversal must produce values in strictly increasing order.
+2. Instead of storing all values in a list, keep track of only the previously visited value.
+3. If the current value is less than or equal to the previous value, the tree is not a valid BST.
+
+**Dry Run**
+Example
+
+        5
+      /   \
+     3     7
+    / \   / \
+   2   4 6   8
+
+In-order traversal:
+2, 3, 4, 5, 6, 7, 8
+Every value is greater than the previous value,
+so the tree is valid.
+
+Invalid Example
+
+        5
+      /   \
+     3     7
+          /
+         4
+
+In-order traversal:
+3, 5, 4, 7
+
+When visiting 4:
+4 <= 5
+Therefore, the tree is not a valid BST.
+
+**Time Complexity**
+O(n)
+Every node is visited exactly once.
+
+**Space Complexity**
+O(h)
+h is the height of the tree because of the recursion stack.
+Balanced tree: O(log n)
+Worst case: O(n)
+
+---
+
 ### 0102. Binary Tree Level Order Traversal  
 🔗 https://leetcode.com/problems/binary-tree-level-order-traversal/description/
 
