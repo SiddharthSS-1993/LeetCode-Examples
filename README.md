@@ -31,6 +31,7 @@ Each solution includes: **problem link, intention, approach, and complexity** (d
 | 0049 | Group Anagrams | ✅ | 15 ms | 16.8 MB
 | 0098 | Validate Binary Search Tree | ✅ | 8 ms | 17.6 MB
 | 0102 | Binary Tree Level Order Traversal | ✅ | 0 ms | 13.3 MB
+| 0230 | kth Smallest Element in a BST  | ✅ | 4 ms | 20.2 MB
 | 0238 | Product of Array Except Self | ✅ | 30 ms | 20.3 MB
 
 
