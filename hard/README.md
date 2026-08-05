@@ -120,8 +120,124 @@ Final Answer = 42
 O(n)
 Every node is visited exactly once(Although we said traverse back to different nodes. it is handled through recursion).
 
-Space Complexity
+**Space Complexity**
 O(h)
 h is the height of the tree.
 Worst case: O(n)
 Balanced tree: O(log n)
+
+---
+
+</details>
+
+<details><summary>Strings</summary>
+
+### 00076. Minimum Window Substring  
+🔗 https://leetcode.com/problems/minimum-window-substring/description/
+
+**Question**
+Given two strings s and t, return the smallest substring of s that contains every character from t, including duplicate characters.
+
+If no such substring exists, return "".
+
+Example:
+s = "ADOBECODEBANC"
+t = "ABC"
+
+Output:
+"BANC"
+
+**Intuition**
+Why Use "formed" and "required"?
+
+Suppose:
+t = "AABC"
+
+need:
+A -> 2
+B -> 1
+C -> 1
+
+required = 3
+required counts the number of unique character conditions, not the total number of characters.
+
+A condition becomes satisfied only when the window contains exactly the required number of that character.
+
+Example:
+window["A"] becomes 2
+Now the condition for A is satisfied, so formed increases by 1.
+
+The complete window is valid when:
+formed == required
+
+**Approach**
+Use a sliding window with two frequency dictionaries.
+1. Count how many times each character is required in t.
+2. Expand the window using the right pointer.
+3. Track the frequency of characters inside the current window.
+4. Track how many required character conditions are currently satisfied.
+5. Once all conditions are satisfied:
+    - Record the window if it is the smallest so far.
+   - Shrink the window from the left.
+6. Stop shrinking when removing a character makes the window invalid.
+7. Continue expanding and shrinking until the string is processed.
+
+
+**Dry Run**
+s = "ADOBECODEBANC"
+t = "ABC"
+
+need = {
+    "A": 1,
+    "B": 1,
+    "C": 1
+}
+
+required = 3
+
+Expand right:
+"A"
+formed = 1
+
+"ADOB"
+formed = 2
+
+"ADOBEC"
+formed = 3
+The window is now valid.
+
+#Record:
+"ADOBEC"
+
+Shrink from the left:
+Remove A
+A count becomes 0,
+which is below the required count.
+
+formed becomes 2.
+Window is invalid again.
+Continue expanding until:
+
+"CODEBANC"
+Then shrink:
+"ODEBANC"
+"DEBANC"
+"EBANC"
+"BANC"
+
+"BANC" is valid and shorter than "ADOBEC".
+Final answer = "BANC"
+
+**Time Complexity**
+O(n + m)
+n is the length of s.
+m is the length of t.
+Each character in s is visited at most twice: once by right and once by left.
+
+**Space Complexity**
+O(m)
+The dictionaries store the required characters from t.
+
+---
+
+</details>
