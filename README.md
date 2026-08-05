@@ -11,11 +11,11 @@ Each solution includes: **problem link, intention, approach, and complexity** (d
 |------|---------|--------|------------|------------|
 | 0001 | Two Sum | ✅ | 3 ms | 13.2 MB |
 | 0020 | Valid Parenthesis | ✅ | 3 ms | 12.6 MB |
-| 0104 | max_depth_binary_tree | ✅ | 8 ms | 24.8 MB |
-| 0121 | buy vs sell stock | ✅ | 77 ms | 19.1 MB |
-| 0141 | linked list cycle | ✅ | 36 ms | 19.6 MB |
-| 0206 | reverse linked list | ✅ | 0 ms | 14.42 MB |
-| 0217 | contains duplicate | ✅ | 31 ms | 25.96 MB |
+| 0104 | Max_Depth_Binary_Tree | ✅ | 8 ms | 24.8 MB |
+| 0121 | Buy vs Sell Stock | ✅ | 77 ms | 19.1 MB |
+| 0141 | Linked List Cycle | ✅ | 36 ms | 19.6 MB |
+| 0206 | Reverse Linked List | ✅ | 0 ms | 14.42 MB |
+| 0217 | Contains Duplicate | ✅ | 31 ms | 25.96 MB |
 | 0226 | Inverted Binary Tree | ✅ | 0 ms | 12.4 MB |
 | 0242 | Valid Anagram | ✅ | 19 ms | 12.5 MB |
 | 0704 | Binary Search | ✅ | 0 ms | 13.3 MB |
@@ -32,7 +32,7 @@ Each solution includes: **problem link, intention, approach, and complexity** (d
 | 0049 | Group Anagrams | ✅ | 15 ms | 16.8 MB |
 | 0098 | Validate Binary Search Tree | ✅ | 8 ms | 17.6 MB |
 | 0102 | Binary Tree Level Order Traversal | ✅ | 0 ms | 13.3 MB |
-| 0230 | kth Smallest Element in a BST  | ✅ | 4 ms | 20.2 MB |
+| 0230 | Kth Smallest Element in a BST  | ✅ | 4 ms | 20.2 MB |
 | 0236 | Least Common Ancestor in a BST  | ✅ | 255 ms | 137.9 MB |
 | 0238 | Product of Array Except Self | ✅ | 30 ms | 20.3 MB |
 
