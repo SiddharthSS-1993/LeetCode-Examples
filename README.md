@@ -26,6 +26,7 @@ Each solution includes: **problem link, intention, approach, and complexity** (d
 
 | Q No | Problem | Status | Time Taken | Memory |
 |------|---------|--------|------------|------------|
+| 0003 | Longest Substring Without Repeating Characters | ✅ | 431 ms | 16.8 MB
 | 0019 | Remove nth node from end | ✅ | 0 ms | 12.4 MB
 | 0033 | Search In rotated Sorted Array | ✅ | 0 ms | 12.42 MB
 | 0049 | Group Anagrams | ✅ | 15 ms | 16.8 MB
