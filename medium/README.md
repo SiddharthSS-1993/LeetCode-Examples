@@ -85,7 +85,7 @@ Only constant extra memory is used.
 
 --- 
 
-### Array Except Self  
+### 0238. Array Except Self  
 🔗 https://leetcode.com/problems/product-of-array-except-self/
 
 **Question:**
@@ -135,6 +135,38 @@ O(n) # One forward pass + one backward pass
 O(1) extra space # We only store prefix/suffix in variables, not arrays
 (Output array is not counted as extra space)
 
+---
+
+### 0347. Top K frequent elements  
+🔗 https://leetcode.com/problems/top-k-frequent-elements/description/
+
+**Question**
+Given an integer array nums and an integer k,
+return the k most frequent elements.
+
+You may return the answer in any order.
+
+**Intuition**
+Why Bucket Sort?
+
+Maximum possible frequency is len(nums). Instead of sorting by frequency, directly group numbers according to their frequencies. Then simply scan the buckets backwards.
+
+Approach
+1. Count the frequency of each number.
+2. Create buckets where index = frequency.
+3. Place each number into its corresponding bucket.
+4. Traverse the buckets from highest frequency
+   to lowest.
+5. Stop after collecting k elements.
+
+**Time Complexity**
+O(n)
+Count frequencies: O(n)
+Fill buckets: O(n)
+Scan buckets: O(n)
+
+Space Complexity
+O(n)
 
 ---
 

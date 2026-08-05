@@ -35,7 +35,7 @@ Each solution includes: **problem link, intention, approach, and complexity** (d
 | 0230 | Kth Smallest Element in a BST  | ✅ | 4 ms | 20.2 MB |
 | 0236 | Least Common Ancestor in a BST  | ✅ | 255 ms | 137.9 MB |
 | 0238 | Product of Array Except Self | ✅ | 30 ms | 20.3 MB |
-
+| 0347 | Top K Frequent Elements | ✅ | 19 ms | 20 MB |
 
 ---</details>
 
